@@ -1,0 +1,11 @@
+<view class="container">
+
+  <view class = "result">
+      <view><text class="text-title">-Bike-Status-Feedback-</text></view>
+
+      <view><text class="text-result">{{feedback}}</text></view>
+  </view>    
+
+  <button type="primary" bindtap="bindViewTap" class="button" disabled="{{buttonState}}">{{buttonStatus}}</button>
+
+</view>

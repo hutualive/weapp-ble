@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view bindtap="scanBLE" class="userbutton">
+    <text>{{scanning ? "STOP" : "START"}} | {{ tipinfo }}</text>
+  </view>
+
+  <view class="dev-list" wx:for="{{device_list}}" wx:for-item="item"
+                          data-title="{{item.deviceId}}"
+                          data-name="{{item.name}}"
+                          wx:key="{{item.name}}"
+                          bindtap="connectBLE">
+
+    <view class="item">{{index}} - {{item.name}}</view>
+
+    <view class="line"></view>
+
+  </view>
+
+</view>
