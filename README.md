@@ -1,2 +1,2 @@
 # weapp-ble
-ble library for wechat weapp
+ble library for wechat app
